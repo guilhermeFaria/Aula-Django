@@ -1,0 +1,37 @@
+Linux
+=====
+
+Comandos Básicos Terminal
+-------------------------
+
+* cd: Permite se deslocar entre a árvore de diretórios do sistema
+* cp: Copia arquivos e diretórios
+* ls: Utilizado para listar o conteúdo de um diretório
+* mkdir: Comando para criar diretórios
+* mv: Move arquivos e diretórios, utilizado também para renomear um arquivo
+* rm: Comando para deletar arquivos e diretórios
+
+Variáveis de Ambiente
+---------------------
+
+São variáveis que guardam informações sobre preferências  pré definidas e usadas por programas para que eles peguem dados sobre seu ambiente.
+
+Normalmente as variáveis de ambiente são escritas com todas as letras maiúsculas.
+
+### Exemplo de uso variável PATH
+
+PATH: Guarda uma lista de diretórios onde os comandos devem ser buscados
+
+```bash
+$ ls
+1.mkd 2.mkd
+
+$ which ls
+/bin/ls
+
+$ /bin/ls
+1.mkd 2.mkd
+
+$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```

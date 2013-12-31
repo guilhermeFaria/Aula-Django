@@ -1,0 +1,56 @@
+Requerimentos
+=============
+* instalado na máquina
+    * VM com ubuntu instalado
+    * Sublime Text
+
+Ementa
+======
+* Ambiente Linux
+    * comandos básicos terminal
+    * variáveis de ambiente
+
+* Git
+    * criando repo no github
+    * cloando o repo
+    * push pull
+
+* pip
+    * instalação do PIP
+    * instalando o virtualenvwrapper
+    * pip freeze
+
+* VirtualEnv
+    * criando um VE
+    * workon
+    * deactivate
+    * instalando o Django dentro do VE
+    * pip freeze
+
+* Arquitetura Django: Exemplos do ZNC-Contatos
+    * MVT
+    * models -> mostra exemplo de modelo
+    * views + forms -> mostra exemplo de uma view com um form simples
+    * template -> mostra um template
+    * auth
+
+* Definição de um projeto
+    * cria repo no github + clone
+    * startproject
+    * startapp -> sistema
+
+* Projeto do Aluno
+    * Enquetes
+    * encurtador de URL
+    * gerenciador de contatos
+    * .....
+
+
+* models + ORM -> Terminal
+    * cria um modelo
+    * realiza o crud pelo terminal
+
+* Admin
+    * registrando modelos
+
+* Construir app simples

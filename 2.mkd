@@ -1,0 +1,87 @@
+Git
+===
+
+Instalação
+----------
+```
+$ sudo apt-get install git-core
+```
+
+Configurações Básicas
+---------------------
+```
+$ git config --global user.name "Seu Nome"
+$ git config --global user.email email@provedor.com
+```
+Criar uma Chave SSH
+```
+$ ssh-keygen -t rsa -C "comment"
+```
+
+Criando um Repositório
+----------------------
+```
+$ mkdir projetos/nomedoprojeto
+$ cd projetos/nomedodiretorio
+$ git init
+Initialized empty Git repository in /projetos/nomedodiretorio/.git/
+
+$ ls .git
+branches config description FETCH_HEAD HEAD hooks index info logs objects refs
+```
+
+Criar um Repositório no Github/Bitbucket
+
+Adicionar o remote origin
+```
+$ git remote add origin git@github.com:user/repo.git
+```
+
+Adicionando um Arquivo ao Versionamento
+---------------------------------------
+Criar um arquivo
+```
+$ echo 'Arquivo de teste' > teste.txt
+```
+Verificar Status do Repositório
+```
+$ git status
+# No ramo master
+#
+# Submissão inicial.
+#
+# Arquivos não monitorados:
+#   (utilize "git add <arquivo>..." para incluir o que será submetido)
+#
+#	teste.txt
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+```
+Adicionar arquivo ao versionamento
+```
+$ git add teste.txt
+```
+Verificar Status Novamente
+```
+$ git status
+# No ramo master
+#
+# Submissão inicial.
+#
+# Mudanças a serem submetidas:
+#   (utilize "git rm --cached <arquivo>..." para não apresentar)
+#
+#	novo arquivo: teste.txt
+#
+```
+
+Subindo o arquivo
+-----------------
+Commit
+```
+$ git commit -m "adicionanto arquivo de teste"
+```
+
+Enviar alterações
+```
+$ git push origin master
+```

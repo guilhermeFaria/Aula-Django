@@ -1,0 +1,50 @@
+Virtualenv
+==========
+virtualenv é uma ferramenta para criar ambientes Python isolados.
+
+Criando um Virtualenv com o virtualenvwrapper
+---------------------------------------------
+```
+$ mkvirtualenv teste
+New python executable in teste/bin/python
+Installing setuptools............done.
+Installing pip...............done.
+```
+
+Saindo de um virtualenv
+-----------------------
+```
+$ deactivate
+```
+
+workon
+------
+```
+$ workon
+teste
+projeto1
+projeto2
+$ workon teste
+```
+
+Instalando um pacote no virtualenv
+----------------------------------
+```
+$ pip install django==1.4.2
+Downloading/unpacking django==1.4.2
+  Using download cache from /home/znc/.pip_download_cache/https%3A%2F%2Fpypi.python.org%2Fpackages%2Fsource%2FD%2FDjango%2FDjango-1.4.2.tar.gz
+  Running setup.py egg_info for package django
+    
+Installing collected packages: django
+  Running setup.py install for django
+    changing mode of build/scripts-2.7/django-admin.py from 644 to 755
+    
+    changing mode of /home/znc/Envs/teste/bin/django-admin.py to 755
+Successfully installed django
+Cleaning up...
+
+$ pip freeze
+Django==1.4.2
+argparse==1.2.1
+wsgiref==0.1.2
+```

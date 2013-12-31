@@ -1,0 +1,27 @@
+PIP
+===
+PIP é um sistema de gerenciamento de pacotes usado para instalar e gerenciar pacotes de software escritos em Python. Muitos pacotes podem ser encontrados no Python Package Index (PyPI).
+
+Instalação
+----------
+```
+$ sudo apt-get install -y python-pip
+```
+
+Instalando um pacote
+--------------------
+```
+$ pip install virtualenvwrapper
+```
+
+Verificando pacotes instalados
+------------------------------
+```
+$ pip freeze
+Django==1.6
+bpython==0.11
+virtualenv==1.9.1
+virtualenv-clone==0.2.4
+virtualenvwrapper==4.0
+wsgiref==0.1.2
+```
