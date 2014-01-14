@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-    Lista de Cursos <a class="btn" href="{% url 'curso_form' %}">Novo Curso</a>
+    Lista de Alunos
 {% endblock page_title %}
 
 {% block content %}
@@ -13,16 +13,16 @@
             </tr>
         </thead>
         <tbody>
-            {% for curso in lista_de_cursos %}
+            {% for aluno in lista_de_alunos %}
             <tr>
-                <td><a href="{% url 'curso_form' curso.pk %}">{{ curso }}</a></td>
-                <td><a href="{% url 'curso_delete' curso.pk %}" class="btn btn-danger btn-mini">Deletar</a></td>
+                <td><a href="{% url 'aluno_form' aluno.pk %}">{{ aluno.get_full_name }}</a></td>
+                <td><a href="#" class="btn btn-danger btn-mini">Deletar</a></td>
             </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="2">Quantidade de Cursos: {{ lista_de_cursos.count }}</td>
+                <td colspan="2">Quantidade de Alunos: {{ lista_de_alunos.count }}</td>
             </tr>
         </tfoot>
     </table>

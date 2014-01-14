@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Matrículas <a class="btn" href="{% url 'matricula_form' %}">Nova Matrícula</a>
+{% endblock page_title %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Curso</th>
+                <th>Data</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for matricula in lista_de_matriculas %}
+            <tr>
+                <td>
+                    <a href="{% url 'matricula_form' matricula.curso.pk matricula.aluno.pk %}">
+                        {{ matricula.aluno.get_full_name }}
+                    </a>
+                </td>
+                <td>{{ matricula.curso }}</td>
+                <td>{{ matricula.data }}</td>
+                <td><a href="#" class="btn btn-danger btn-mini">Deletar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Quantidade de matrículas: {{ lista_de_matriculas.count }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock content %}
