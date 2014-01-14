@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load bootstrap_toolkit %}
+
+{% block page_title %}
+    Deletar {{ object }}
+{% endblock page_title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h4>Você tem certeza que deseja deletar "{{ object }}"?</h4>
+        <input type="submit" value="Confirmar" class="btn btn-danger" />
+    </form>
+{% endblock content %}

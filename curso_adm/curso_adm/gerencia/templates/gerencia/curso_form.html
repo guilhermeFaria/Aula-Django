@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    {% if form.instance.pk %}
+        {{ form.instance }}
+    {% else %}
+        Novo Curso
+    {% endfor %}
+{% endblock page_title %}
+
+{% block content %}    
+    <form action="POST">
+        {{ form.as_p }}
+
+        <input type="submit" value="Salvar">
+    </form>
+{% endblock content %}
